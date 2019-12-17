@@ -1,0 +1,13 @@
+<p> riddle name: <%= @riddle.name %></p>
+<p> riddle question: <%= @riddle.question %></p>
+
+<p> Your answer was: <%= params[:answer] %></p>
+
+<% if @riddles.answer == params[:answer] %>
+<h4> Correct! </h4>
+<p> Yuo Are Smart </p>
+<% else %>
+<p>There are currently no riddles to display.</p>
+<% end %>
+
+<a href="/riddles">Return to riddle list</a>

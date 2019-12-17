@@ -1,0 +1,11 @@
+<% if @riddles.any? %>
+<ul>
+  <% @riddles.each do |riddle| %>
+    <li><a href="/riddles/<%= riddle.id %>"><%= riddle.name %></a></li>
+  <% end %>
+</ul>
+<% else %>
+<p>There are currently no riddles to display.</p>
+<% end %>
+
+<a href="/riddles/new">Add a riddle of your own</a>
